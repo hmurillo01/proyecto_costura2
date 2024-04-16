@@ -1,0 +1,26 @@
+<!-- En tu archivo detalle_tarea.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle de Tarea</title>
+</head>
+<body>
+    <h1>Detalle de Tarea</h1>
+    <p><strong>Descripción:</strong> {{ tarea.descripcion }}</p>
+    <p><strong>Cantidad de Prendas:</strong> {{ tarea.cant_prendas }}</p>
+    <p><strong>Fecha de Inicio:</strong> {{ tarea.fecha_ini }}</p>
+    <p><strong>Fecha de Fin:</strong> {{ tarea.fecha_fin }}</p>
+   {% comment %}  {% if tarea.id_costurera %}
+        <p><strong>Costurera Asignada:</strong> {{ tarea.costurera.nombre }} {{ tarea.costurera.apellido }}</p>
+    {% else %}
+        <p><strong>Costurera Asignada:</strong> Sin asignar</p>
+        <a href="{% url 'asignar_tarea_costurera' tarea.id %}">Asignar a Costurera</a>
+    {% endif %} {% endcomment %}
+    <a href="{% url 'modificar_tarea' tarea.id %}">Modificar Tarea</a>
+    <a href="{% url 'eliminar_tarea' tarea.id %}">Eliminar Tarea</a>
+    <a href="{% url 'lista_tareas' %}">Volver a Lista de Tareas</a>
+</body>
+</html>

@@ -1,0 +1,16 @@
+{% extends "layouts/app.html" %}
+{% block title %}Modificar tarea{% endblock %}
+
+
+{% block content %}
+<div class="form-container">
+    <title>Modificar Tarea</title>
+</head>
+<body>
+    <h1>Modificar Tarea</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Guardar Cambios</button>
+    </form>
+{% endblock %}

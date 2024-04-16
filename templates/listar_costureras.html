@@ -1,0 +1,14 @@
+{% extends "layouts/app.html" %}
+
+{% block title %}Listar Costureras{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <h1>Listado de Costureras</h1>
+        <ul>
+            {% for costurera in costureras %}
+                <li>{{ costurera.nombre }} {{ costurera.apellido }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}

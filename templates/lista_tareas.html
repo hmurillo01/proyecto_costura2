@@ -1,0 +1,32 @@
+{% extends "layouts/app.html" %}
+{% block title %}Lista de tareas{% endblock %}
+
+
+{% block content %}
+<div class="task-list-container">
+    
+  <h1>Listado de Tareas</h1>
+  <div class="grid-container">
+    {% for tarea in tareas %}
+    <div class="grid-item">
+        
+     <ul>
+        <p>Tarea #  {{ tarea.id }}</p>
+      <li><p>Estado: {{ tarea.estado }}</p></li>
+      <li><p>Cantidad de prendas: {{ tarea.cant_prendas }}</p></li>
+      <li><p>Fecha de inicio: {{ tarea.fecha_ini }}</p></li>
+      <li><p>Fecha de fin: {{ tarea.fecha_fin }}</p></li>
+      <li><p>Costurera encargada: {{ tarea.costurera }}</p></li>
+      <li><h2>Descripcion de la tarea: <br> {{ tarea.descripcion }}</h2></li>
+    </ul> 
+
+      <div class="task-buttons">
+        <a href="{% url 'modificar_tarea' tarea.id %}" class="btn-modify">Modificar</a>
+        <a href="{% url 'eliminar_tarea' tarea.id %}" class="btn-delete">Eliminar</a>
+     
+    </div>
+</div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}

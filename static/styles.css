@@ -1,0 +1,274 @@
+/* Estilos generales */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    /* Variables de estilo */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Asegura que el contenido ocupe al menos toda la altura de la ventana */
+    margin: 0; /* Asegura que no haya margen adicional en el cuerpo */
+}
+
+/* Estilo para el contenido principal */
+.main-content {
+    flex-grow: 1; /* Permite que el contenido principal crezca para llenar el espacio restante */
+}
+
+/* Estilos para el formulario */
+.form-control {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: #f0f0f0;
+}
+
+.form-control:hover {
+    border-color: #beafaf;
+}
+
+/* Estilos para el contenedor del formulario */
+.form-container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: "Gill Sans Extrabold", Helvetica, sans-serif;
+}
+
+.form-container h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.form-container button[type="submit"] {
+    background-color: #c0c0c0;
+    color: black;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+}
+
+.form-container button[type="submit"]:hover {
+    background-color: #a1a7a1;
+}
+
+/* Estilos para el fondo de color */
+.bg-color {
+    background-color: #f5f6f7;
+}
+
+<<<<<<< HEAD
+/* Estilos para el lista de tareas */
+=======
+/* Estilos para la lista de tareas */
+>>>>>>> 439e333801904bf3a41c8645e17c6e510822f72a
+.task-list-container {
+    margin: 0 20px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    overflow: hidden;
+    max-width: max-content;
+}
+
+.grid-item {
+    background-color: #9c9c9c;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid #0a0a0a;  
+}
+
+.grid-item h2 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.grid-item p {
+    font-size: px;
+    margin-bottom: 10px;
+}
+
+.grid-item:nth-child(3n) {
+    margin-right: 0;
+}
+
+.grid-container::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Estilos para los botones de las tareas */
+.task-buttons {
+    margin-top: 10px;
+}
+
+.btn-modify,
+.btn-delete {
+    display: inline-block;
+    padding: 5px 10px;
+    margin-right: 10px;
+    text-decoration: none;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+.btn-modify:hover,
+.btn-delete:hover {
+    background-color: #0056b3;
+}
+
+.task-list-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.task-list-container ul {
+    list-style-type: square;
+}
+
+/* Estilos para el menú horizontal */
+.navbar {
+    background-color: #92a8aa;
+    padding: 10px;
+<<<<<<< HEAD
+    text-align: right;
+    font-family: "Gill Sans Extrabold", Helvetica, sans-serif;
+=======
+    text-align: right; /* Alinea el contenido a la derecha */
+    font-family: "Gill Sans Extrabold", Helvetica, sans-serif; /* Tipo de letra agradable al usuario */
+>>>>>>> 439e333801904bf3a41c8645e17c6e510822f72a
+}
+
+.navbar-menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+<<<<<<< HEAD
+    display: inline-block;
+}
+
+.navbar-item {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.navbar-link {
+    color: #131313;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.navbar-link:hover {
+    background-color: #555555;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.submenu a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.submenu a:hover {
+    background-color: #ddd;
+}
+
+.navbar-item:hover .submenu {
+    display: block;
+
+=======
+    display: inline-block; /* Para que los elementos del menú se muestren en línea */
+}
+
+.navbar-item {
+    display: inline-block; /* Para que los elementos del menú se muestren en línea */
+    margin-left: 10px; /* Espaciado entre elementos del menú */
+}
+
+.navbar-link {
+    color: #131313; /* color del texto del menu*/
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px; /* Añade esquinas redondeadas a los enlaces */
+    transition: background-color 0.3s; /* Transición suave para el cambio de color de fondo */
+}
+
+.navbar-link:hover {
+    background-color: #555555; /* Cambia el color de fondo al pasar el ratón sobre el enlace */
+}
+
+>>>>>>> 439e333801904bf3a41c8645e17c6e510822f72a
+/* Estilos para el footer */
+.footer {
+    background-color: #92a8aa; /* Color de fondo del footer */
+    color: #131313; /* Color del texto del footer */
+    padding: 20px; /* Espaciado interno del footer */
+    text-align: center; /* Alineación del texto al centro */
+<<<<<<< HEAD
+=======
+    position: fixed; /* Fija el footer en la parte inferior */
+    bottom: 0; /* Lo coloca al fondo de la página */
+>>>>>>> 439e333801904bf3a41c8645e17c6e510822f72a
+    width: 100%; /* Ocupa el ancho completo de la página */
+}
+
+/* Estilos para la información del footer */
+.footer-info {
+    display: flex; /* Muestra los elementos en línea */
+<<<<<<< HEAD
+    justify-content: center; /* Centra horizontalmente los elementos */
+=======
+    justify-content: space-around; /* Distribuye uniformemente los elementos a lo largo del contenedor */
+>>>>>>> 439e333801904bf3a41c8645e17c6e510822f72a
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en varias líneas si no caben en una sola */
+}
+
+.footer-info span {
+    margin-right: 20px; /* Espacio entre cada línea de texto */
+}
+
+.footer-info span:last-child {
+    margin-right: 0; /* Elimina el margen derecho del último elemento */
+<<<<<<< HEAD
+}
+
+/* Estilos para el formulario de crear costurera */
+.form-crear-costurera {
+    margin-bottom: 120px;
+=======
+>>>>>>> 439e333801904bf3a41c8645e17c6e510822f72a
+}

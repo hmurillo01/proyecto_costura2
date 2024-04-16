@@ -1,0 +1,12 @@
+{% extends "layouts/app.html" %}
+{% block title %}Modificar costurera{% endblock %}
+
+{% block content %}
+<div class="form-container">
+    <h1>Costurera: {{ costurera.nombre }} {{ costurera.apellido }}</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Guardar cambios</button>
+    </form>
+{% endblock %}
